@@ -37,7 +37,7 @@
 		};
 		const hudState = { t: 0, lastVideoTime: -1, seed: Math.random() };
 		// Performance knobs (runtime adjustable)
-		let MAX_HANDS = 1; // Track one hand for speed
+		let MAX_HANDS = 2; // Track one hand for speed
 		let MODEL_VARIANT = "full"; // "lite" (fast) or "full" (accurate) - lite model 404s
 		let VIDEO_WIDTH = 640;
 		let VIDEO_HEIGHT = 480;
@@ -116,7 +116,7 @@
 			const preset = modeSelect.value;
 			if (preset === "speed") {
 				MODEL_VARIANT = "full"; // lite model 404s, using full for now
-				MAX_HANDS = 1;
+				MAX_HANDS = 2;
 				VIDEO_WIDTH = 640; VIDEO_HEIGHT = 480; FRAME_RATE = 30;
 			} else {
 				MODEL_VARIANT = "full";
